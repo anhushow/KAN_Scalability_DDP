@@ -1,0 +1,104 @@
+================================================================
+KAN并行训练性能测试 - 最终报告
+================================================================
+测试完成时间: Sun Jul 20 21:25:36 CEST 2025
+总测试数量: 21
+完成测试数量: 21
+成功率: 100.0%
+
+================================================================
+测试结果统计:
+================================================================
+
+强扩展性测试:
+----------------------------------------
+  + strong_scaling_n4g8 - 8GPU四节点强扩展
+  + strong_scaling_n4g4 - 4GPU四节点强扩展
+  + strong_scaling_n1g1 - 1GPU基准测试
+  + strong_scaling_n1g2 - 2GPU单节点强扩展
+  + strong_scaling_n2g2 - 2GPU双节点强扩展
+  + strong_scaling_n2g4 - 4GPU双节点强扩展
+
+弱扩展性测试:
+----------------------------------------
+  + weak_scaling_n2g4 - 4GPU双节点弱扩展
+  + weak_scaling_n2g2 - 2GPU双节点弱扩展
+  + weak_scaling_n1g2 - 2GPU单节点弱扩展
+  + weak_scaling_n1g1 - 1GPU弱扩展基准
+  + weak_scaling_n4g8 - 8GPU四节点弱扩展
+  + weak_scaling_n4g4 - 4GPU四节点弱扩展
+
+通信开销测试:
+----------------------------------------
+  + communication_inter_n4g8 - 8GPU四节点间通信
+  + communication_inter_n4g4 - 4GPU四节点间通信
+  + communication_intra_n1g2 - 节点内通信基准
+  + communication_inter_n2g2 - 2GPU跨节点通信
+  + communication_inter_n2g4 - 4GPU跨节点通信
+
+模型扩展性测试:
+----------------------------------------
+  + model_scaling_xlarge_n2g4 - 超大型模型(~64K参数)4GPU
+  + model_scaling_medium_n2g4 - 中型模型(~4K参数)4GPU
+  + model_scaling_small_n2g4 - 小型模型(~1K参数)4GPU
+  + model_scaling_large_n2g4 - 大型模型(~16K参数)4GPU
+
+================================================================
+详细测试状态:
+================================================================
+# KAN性能测试状态跟踪
+# 格式: 测试名称 状态 作业ID 提交时间 完成时间
+strong_scaling_n1g1 COMPLETED 14994480 2025-07-20 20:06:36 -
+strong_scaling_n1g2 COMPLETED 14994482 2025-07-20 20:07:06 -
+strong_scaling_n2g2 COMPLETED 14994493 2025-07-20 20:07:36 -
+strong_scaling_n2g4 SUBMITTED 14996484 2025-07-20 21:05:54 -
+strong_scaling_n4g4 COMPLETED 14994506 2025-07-20 20:08:37 -
+strong_scaling_n4g8 COMPLETED 14994528 2025-07-20 20:09:07 -
+weak_scaling_n1g1 COMPLETED 14994529 2025-07-20 20:09:37 -
+weak_scaling_n1g2 COMPLETED 14994551 2025-07-20 20:10:07 -
+weak_scaling_n2g2 COMPLETED 14994552 2025-07-20 20:10:37 -
+weak_scaling_n2g4 SUBMITTED 14996643 2025-07-20 21:09:26 -
+weak_scaling_n4g4 COMPLETED 14994767 2025-07-20 20:15:39 -
+weak_scaling_n4g8 COMPLETED 14994789 2025-07-20 20:16:09 -
+communication_intra_n1g2 COMPLETED 14994790 2025-07-20 20:16:39 -
+communication_inter_n2g2 COMPLETED 14994825 2025-07-20 20:17:09 -
+communication_inter_n2g4 COMPLETED 14994881 2025-07-20 20:18:39 -
+communication_inter_n4g4 COMPLETED 14994957 2025-07-20 20:21:09 -
+communication_inter_n4g8 COMPLETED 14995135 2025-07-20 20:22:39 -
+model_scaling_large_n2g4 SUBMITTED 14995136 2025-07-20 20:23:09 -
+model_scaling_medium_n2g4 COMPLETED 14995178 2025-07-20 20:23:39 -
+model_scaling_small_n2g4 COMPLETED 14995222 2025-07-20 20:25:10 -
+model_scaling_xlarge_n2g4 SUBMITTED 14996049 2025-07-20 20:53:44 -
+
+================================================================
+文件位置:
+================================================================
+结果文件: results/
+日志文件: logs/
+测试状态: test_status.txt
+测试报告: test_report_20250720_212536.txt
+
+================================================================
+后续操作建议:
+================================================================
+1. 生成结果汇总: python summarize_results.py
+2. 生成性能图表: 自动生成在当前目录
+3. 打包结果文件: tar -czf results_backup.tar.gz results/ logs/
+4. 检查失败测试: grep FAILED test_status.txt
+5. 重新运行失败测试: 手动提交相应的脚本文件
+================================================================
+快速性能查看命令:
+================================================================
+# 查看训练时间对比
+grep "总训练时间:" results/*_summary.txt | sort
+
+# 查看并行效率对比  
+grep "并行效率:" results/*_summary.txt | sort
+
+# 查看通信开销对比
+grep "通信开销:" results/*_summary.txt | sort
+
+# 查看GPU利用率:
+grep "GPU利用率:" results/*_summary.txt | sort
+
+================================================================

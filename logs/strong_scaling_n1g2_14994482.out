@@ -1,0 +1,59 @@
+slurmstepd: info: Setting TMPDIR to /scratch/14994482. Previous errors about TMPDIR can be discarded
+单节点DDP配置: Master=localhost:12355
+=== 强扩展性测试（固定100K样本）: strong_scaling_n1g2 ===
+节点数: 1
+总GPU数: 2
+作业ID: 14994482
+GPU类型: 普通A100节点
+CPU核心: 64 (2×32)
+描述: 2GPU单节点
+开始时间: Sun Jul 20 20:07:29 CEST 2025
+Rank 0: 跨节点DDP配置
+Rank 0: Master节点: localhost
+Rank 0: Master端口: 12355
+Rank 0: World size: 2, Local rank: 0
+Rank 0: 连接到 localhost:12355
+=== KAN并行化最小可行性测试 ===
+测试类型: strong_scaling
+模式: DDP
+数据集大小: 100,000样本
+参数: K=3, Grid=10, Width=64
+设备: cuda:0, GPU数量: 2, 节点数量: 1
+批次大小: 512, 训练轮数: 40
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 2
+总参数数: 5,414
+GPU预热中...
+Rank 1: 跨节点DDP配置
+Rank 1: Master节点: localhost
+Rank 1: Master端口: 12355
+Rank 1: World size: 2, Local rank: 1
+Rank 1: 连接到 localhost:12355
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 2
+Epoch  0/40: Loss=6.275709, Time=14.85s, Throughput=3367.8 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch  5/40: Loss=0.111120, Time=14.03s, Throughput=3563.0 samples/s, CommOverhead=1.3%, GPU=0.04GB
+Epoch 10/40: Loss=0.076084, Time=14.01s, Throughput=3569.0 samples/s, CommOverhead=1.8%, GPU=0.04GB
+Epoch 15/40: Loss=0.058893, Time=14.02s, Throughput=3567.3 samples/s, CommOverhead=1.3%, GPU=0.04GB
+Epoch 20/40: Loss=0.041864, Time=14.07s, Throughput=3552.8 samples/s, CommOverhead=3.0%, GPU=0.04GB
+Epoch 25/40: Loss=0.023999, Time=14.05s, Throughput=3559.9 samples/s, CommOverhead=1.3%, GPU=0.04GB
+Epoch 30/40: Loss=0.011411, Time=14.11s, Throughput=3544.1 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch 35/40: Loss=0.005508, Time=14.05s, Throughput=3558.0 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch 39/40: Loss=0.003573, Time=14.04s, Throughput=3561.4 samples/s, CommOverhead=1.3%, GPU=0.04GB
+
+=== 训练完成 ===
+测试类型: strong_scaling
+总训练时间: 563.58秒
+平均吞吐量: 7098.7 samples/s (总计), 3549.4 samples/s (每GPU)
+平均通信开销: 1.5%
+最终损失: 0.003573
+峰值GPU内存: 0.06GB
+=== 测试完成 ===
+结束时间: Sun Jul 20 20:17:04 CEST 2025
+查找结果文件...
+SUCCESS: 测试结果已保存到: ./results/strong_scaling_n1g2_ddp_performance.json
+RESULTS: 快速查看
+  总训练时间: 563.58秒
+  平均通信开销: 1.5%

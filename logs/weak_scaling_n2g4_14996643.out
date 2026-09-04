@@ -1,0 +1,286 @@
+slurmstepd: info: Setting TMPDIR to /scratch/14996643. Previous errors about TMPDIR can be discarded
+跨节点DDP配置: Master=a100-6:16643
+=== 弱扩展性测试（每GPU 25K样本）: weak_scaling_n2g4 ===
+节点数: 2
+总GPU数: 4
+作业ID: 14996643
+GPU类型: 普通A100节点
+CPU核心: 128 (4×32)
+描述: 4GPU(100K)双节点
+开始时间: Sun Jul 20 21:20:27 CEST 2025
+节点列表: a100-[6,15]
+Master节点: a100-6
+Master端口: 16643
+检查节点连通性...
+c207-15
+c207-15
+c207-6
+c207-6
+c207-6:2459057:2459057 [0] NCCL INFO Bootstrap : Using ib0:172.30.207.6<0>
+c207-6:2459057:2459057 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+c207-6:2459057:2459057 [0] NCCL INFO cudaDriverVersion 12080
+NCCL version 2.19.3+cuda12.1
+c207-6:2459057:2459228 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+c207-6:2459057:2459228 [0] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.207.6<0>
+c207-6:2459057:2459228 [0] NCCL INFO Using non-device net plugin version 0
+c207-6:2459057:2459228 [0] NCCL INFO Using network IB
+c207-6:2459057:2459228 [0] NCCL INFO comm 0x55d345412eb0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 17000 commId 0x3cc2d2966dce3b43 - Init START
+c207-6:2459057:2459228 [0] NCCL INFO Setting affinity for GPU 0 to ffff
+c207-6:2459057:2459228 [0] NCCL INFO Channel 00/10 :    0   1   2   3
+c207-6:2459057:2459228 [0] NCCL INFO Channel 01/10 :    0   1   2   3
+c207-6:2459057:2459228 [0] NCCL INFO Channel 02/10 :    0   1   2   3
+c207-6:2459057:2459228 [0] NCCL INFO Channel 03/10 :    0   3   2   1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 04/10 :    0   3   2   1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 05/10 :    0   1   2   3
+c207-6:2459057:2459228 [0] NCCL INFO Channel 06/10 :    0   1   2   3
+c207-6:2459057:2459228 [0] NCCL INFO Channel 07/10 :    0   1   2   3
+c207-6:2459057:2459228 [0] NCCL INFO Channel 08/10 :    0   3   2   1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 09/10 :    0   3   2   1
+c207-6:2459057:2459228 [0] NCCL INFO Trees [0] 1/2/-1->0->-1 [1] 1/2/-1->0->-1 [2] 1/2/-1->0->-1 [3] -1/-1/-1->0->1 [4] -1/-1/-1->0->1 [5] 1/-1/-1->0->2 [6] 1/-1/-1->0->2 [7] 1/-1/-1->0->2 [8] -1/-1/-1->0->1 [9] -1/-1/-1->0->1
+c207-6:2459057:2459228 [0] NCCL INFO P2P Chunksize set to 131072
+c207-6:2459057:2459228 [0] NCCL INFO Channel 00/0 : 3[1] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 01/0 : 3[1] -> 0[0] [receive] via NET/IB/1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 02/0 : 3[1] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 05/0 : 3[1] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 06/0 : 3[1] -> 0[0] [receive] via NET/IB/1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 07/0 : 3[1] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 00 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 01 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 02 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 05 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 06 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 07 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 03/0 : 0[0] -> 3[1] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 04/0 : 0[0] -> 3[1] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 08/0 : 0[0] -> 3[1] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 09/0 : 0[0] -> 3[1] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Connected all rings
+c207-6:2459057:2459228 [0] NCCL INFO Channel 03 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 04 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 08 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 09 : 0[0] -> 1[1] via SHM/direct/direct
+c207-6:2459057:2459228 [0] NCCL INFO Channel 00/0 : 2[0] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 01/0 : 2[0] -> 0[0] [receive] via NET/IB/1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 02/0 : 2[0] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 05/0 : 2[0] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 06/0 : 2[0] -> 0[0] [receive] via NET/IB/1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 07/0 : 2[0] -> 0[0] [receive] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 00/0 : 0[0] -> 2[0] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 01/0 : 0[0] -> 2[0] [send] via NET/IB/1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 02/0 : 0[0] -> 2[0] [send] via NET/IB/0
+c207-15:745753:745753 [0] NCCL INFO cudaDriverVersion 12080
+c207-15:745753:745753 [0] NCCL INFO Bootstrap : Using ib0:172.30.207.15<0>
+c207-15:745753:745753 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+c207-15:745753:745922 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+c207-15:745753:745922 [0] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.207.15<0>
+c207-15:745753:745922 [0] NCCL INFO Using non-device net plugin version 0
+c207-15:745753:745922 [0] NCCL INFO Using network IB
+c207-15:745753:745922 [0] NCCL INFO comm 0x55cce2645df0 rank 2 nranks 4 cudaDev 0 nvmlDev 0 busId 17000 commId 0x3cc2d2966dce3b43 - Init START
+c207-15:745753:745922 [0] NCCL INFO Setting affinity for GPU 0 to ffff
+c207-15:745753:745922 [0] NCCL INFO Trees [0] 3/-1/-1->2->0 [1] 3/-1/-1->2->0 [2] 3/-1/-1->2->0 [3] -1/-1/-1->2->3 [4] -1/-1/-1->2->3 [5] 3/0/-1->2->-1 [6] 3/0/-1->2->-1 [7] 3/0/-1->2->-1 [8] -1/-1/-1->2->3 [9] -1/-1/-1->2->3
+c207-15:745753:745922 [0] NCCL INFO P2P Chunksize set to 131072
+c207-15:745753:745922 [0] NCCL INFO Channel 00/0 : 1[1] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 01/0 : 1[1] -> 2[0] [receive] via NET/IB/1
+c207-15:745753:745922 [0] NCCL INFO Channel 02/0 : 1[1] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 05/0 : 1[1] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 06/0 : 1[1] -> 2[0] [receive] via NET/IB/1
+c207-15:745753:745922 [0] NCCL INFO Channel 07/0 : 1[1] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 00 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 01 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 02 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 05 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 06 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 07 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 03/0 : 2[0] -> 1[1] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 04/0 : 2[0] -> 1[1] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 08/0 : 2[0] -> 1[1] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 09/0 : 2[0] -> 1[1] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Connected all rings
+c207-15:745753:745922 [0] NCCL INFO Channel 03 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 04 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 08 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 09 : 2[0] -> 3[1] via SHM/direct/direct
+c207-15:745753:745922 [0] NCCL INFO Channel 00/0 : 0[0] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 01/0 : 0[0] -> 2[0] [receive] via NET/IB/1
+c207-15:745753:745922 [0] NCCL INFO Channel 02/0 : 0[0] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 06/0 : 0[0] -> 2[0] [receive] via NET/IB/1
+c207-15:745753:745922 [0] NCCL INFO Channel 07/0 : 0[0] -> 2[0] [receive] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 00/0 : 2[0] -> 0[0] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 01/0 : 2[0] -> 0[0] [send] via NET/IB/1
+c207-15:745753:745922 [0] NCCL INFO Channel 02/0 : 2[0] -> 0[0] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 05/0 : 2[0] -> 0[0] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Channel 06/0 : 2[0] -> 0[0] [send] via NET/IB/1
+c207-15:745753:745922 [0] NCCL INFO Channel 07/0 : 2[0] -> 0[0] [send] via NET/IB/0
+c207-15:745753:745922 [0] NCCL INFO Connected all trees
+c207-15:745753:745922 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+Rank 3: 跨节点DDP配置
+Rank 3: Master节点: a100-6
+Rank 3: Master端口: 16643
+Rank 3: World size: 4, Local rank: 1
+Rank 3: 连接到 a100-6:16643
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 4
+Rank 1: 跨节点DDP配置
+Rank 1: Master节点: a100-6
+Rank 1: Master端口: 16643
+Rank 1: World size: 4, Local rank: 1
+Rank 1: 连接到 a100-6:16643
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 4
+c207Rank 0: 跨节点DDP配置
+Rank 0: Master节点: a100-6
+Rank 0: Master端口: 16643
+Rank 0: World size: 4, Local rank: 0
+Rank 0: 连接到 a100-6:16643
+=== KAN并行化最小可行性测试 ===
+测试类型: weak_scaling
+模式: DDP
+数据集大小: 100,000样本
+参数: K=3, Grid=10, Width=64
+设备: cuda:0, GPU数量: 4, 节点数量: 2
+批次大小: 512, 训练轮数: 40
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 4
+总参数数: 5,414
+GPU预热中...
+c207-15:745753:745922Rank 2: 跨节点DDP配置
+Rank 2: Master节点: a100-6
+Rank 2: Master端口: 16643
+Rank 2: World size: 4, Local rank: 0
+Rank 2: 连接到 a100-6:16643
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 4
+Epoch  0/40: Loss=8.391692, Time=7.89s, Throughput=3166.7 samples/s, CommOverhead=5.1%, GPU=0.04GB
+Epoch  5/40: Loss=1.044801, Time=7.23s, Throughput=3456.1 samples/s, CommOverhead=4.5%, GPU=0.04GB
+Epoch 10/40: Loss=0.128066, Time=7.25s, Throughput=3449.5 samples/s, CommOverhead=5.1%, GPU=0.04GB
+Epoch 15/40: Loss=0.095556, Time=7.24s, Throughput=3450.8 samples/s, CommOverhead=4.0%, GPU=0.04GB
+Epoch 20/40: Loss=0.079998, Time=7.25s, Throughput=3450.1 samples/s, CommOverhead=4.5%, GPU=0.04GB
+Epoch 25/40: Loss=0.071546, Time=7.54s, Throughput=3314.7 samples/s, CommOverhead=2.9%, GPU=0.04GB
+Epoch 30/40: Loss=0.058522, Time=7.24s, Throughput=3453.9 samples/s, CommOverhead=4.9%, GPU=0.04GB
+Epoch 35/40: Loss=0.049595, Time=7.22s, Throughput=3464.9 samples/s, CommOverhead=4.2%, GPU=0.04GB
+c207-6:2459058:2459058 [1] NCCL INFO cudaDriverVersion 12080
+c207-6:2459058:2459058 [1] NCCL INFO Bootstrap : Using ib0:172.30.207.6<0>
+c207-6:2459058:2459058 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+c207-6:2459058:2459229 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+c207-6:2459058:2459229 [1] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.207.6<0>
+c207-6:2459058:2459229 [1] NCCL INFO Using non-device net plugin version 0
+c207-6:2459058:2459229 [1] NCCL INFO Using network IB
+c207-6:2459058:2459229 [1] NCCL INFO comm 0x56331a4c4080 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 98000 commId 0x3cc2d2966dce3b43 - Init START
+c207-6:2459058:2459229 [1] NCCL INFO Setting affinity for GPU 1 to ffff,00000000
+c207-6:2459058:2459229 [1] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] -1/-1/-1->1->0 [2] -1/-1/-1->1->0 [3] 0/3/-1->1->-1 [4] 0/3/-1->1->-1 [5] -1/-1/-1->1->0 [6] -1/-1/-1->1->0 [7] -1/-1/-1->1->0 [8] 0/-1/-1->1->3 [9] 0/-1/-1->1->3
+c207-6:2459058:2459229 [1] NCCL INFO P2P Chunksize set to 131072
+c207-6:2459058:2459229 [1] NCCL INFO Channel 00/0 : 1[1] -> 2[0] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 01/0 : 1[1] -> 2[0] [send] via NET/IB/1
+c207-6:2459058:2459229 [1] NCCL INFO Channel 02/0 : 1[1] -> 2[0] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 05/0 : 1[1] -> 2[0] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 06/0 : 1[1] -> 2[0] [send] via NET/IB/1
+c207-6:2459058:2459229 [1] NCCL INFO Channel 07/0 : 1[1] -> 2[0] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 03/0 : 2[0] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 04/0 : 2[0] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 08/0 : 2[0] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 09/0 : 2[0] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 03 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 04 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 08 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 09 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Connected all rings
+c207-6:2459058:2459229 [1] NCCL INFO Channel 03/0 : 3[1] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 04/0 : 3[1] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 08/0 : 3[1] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 09/0 : 3[1] -> 1[1] [receive] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[1] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[1] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 08/0 : 1[1] -> 3[1] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 09/0 : 1[1] -> 3[1] [send] via NET/IB/0
+c207-6:2459058:2459229 [1] NCCL INFO Channel 00 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 01 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 02 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 05 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 06 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Channel 07 : 1[1] -> 0[0] via SHM/direct/direct
+c207-6:2459058:2459229 [1] NCCL INFO Connected all trees
+c207-6:2459058:2459229 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+c207-6:2459058:2459229 [1] NCCL INFO 10 coll channels, 0 nvls channels, 16 p2p channels, 2 p2p channels per peer
+c207-6:2459058:2459229 [1] NCCL INFO comm 0x56331a4c4080 rank 1 nranks 4 cudaDev 1 nvmlDev 1 busId 98000 commId 0x3cc2d2966dce3b43 - Init COMPLETE
+c207-15:745754:745754 [1] NCCL INFO cudaDriverVersion 12080
+c207-15:745754:745754 [1] NCCL INFO Bootstrap : Using ib0:172.30.207.15<0>
+c207-15:745754:745754 [1] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+c207-15:745754:745921 [1] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+c207-15:745754:745921 [1] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.207.15<0>
+c207-15:745754:745921 [1] NCCL INFO Using non-device net plugin version 0
+c207-15:745754:745921 [1] NCCL INFO Using network IB
+c207-15:745754:745921 [1] NCCL INFO comm 0x5643417b3b10 rank 3 nranks 4 cudaDev 1 nvmlDev 1 busId 98000 commId 0x3cc2d2966dce3b43 - Init START
+c207-15:745754:745921 [1] NCCL INFO Setting affinity for GPU 1 to ffff,00000000
+c207-15:745754:745921 [1] NCCL INFO Trees [0] -1/-1/-1->3->2 [1] -1/-1/-1->3->2 [2] -1/-1/-1->3->2 [3] 2/-1/-1->3->1 [4] 2/-1/-1->3->1 [5] -1/-1/-1->3->2 [6] -1/-1/-1->3->2 [7] -1/-1/-1->3->2 [8] 2/1/-1->3->-1 [9] 2/1/-1->3->-1
+c207-15:745754:745921 [1] NCCL INFO P2P Chunksize set to 131072
+c207-15:745754:745921 [1] NCCL INFO Channel 00/0 : 3[1] -> 0[0] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 01/0 : 3[1] -> 0[0] [send] via NET/IB/1
+c207-15:745754:745921 [1] NCCL INFO Channel 02/0 : 3[1] -> 0[0] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 05/0 : 3[1] -> 0[0] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 06/0 : 3[1] -> 0[0] [send] via NET/IB/1
+c207-15:745754:745921 [1] NCCL INFO Channel 07/0 : 3[1] -> 0[0] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 03/0 : 0[0] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 04/0 : 0[0] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 08/0 : 0[0] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 09/0 : 0[0] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 03 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 04 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 08 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 09 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Connected all rings
+c207-15:745754:745921 [1] NCCL INFO Channel 03/0 : 1[1] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 04/0 : 1[1] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 08/0 : 1[1] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 09/0 : 1[1] -> 3[1] [receive] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 03/0 : 3[1] -> 1[1] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 04/0 : 3[1] -> 1[1] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 08/0 : 3[1] -> 1[1] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 09/0 : 3[1] -> 1[1] [send] via NET/IB/0
+c207-15:745754:745921 [1] NCCL INFO Channel 00 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 01 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 02 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 05 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 06 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Channel 07 : 3[1] -> 2[0] via SHM/direct/direct
+c207-15:745754:745921 [1] NCCL INFO Connected all trees
+c207-15:745754:745921 [1] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+c207-15:745754:745921 [1] NCCL INFO 10 coll channels, 0 nvls channels, 16 p2p channels, 2 p2p channels per peer
+c207-15:745754:745921 [1] NCCL INFO comm 0x5643417b3b10 rank 3 nranks 4 cudaDev 1 nvmlDev 1 busId 98000 commId 0x3cc2d2966dce3b43 - Init COMPLETE
+c207-15:745754:745927 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+Epoch 39/40: Loss=0.042369, Time=7.23s, Throughput=3458.3 samples/s, CommOverhead=4.7%, GPU=0.04GB
+
+=== 训练完成 ===
+测试类型: weak_scaling
+总训练时间: 290.63秒
+平均吞吐量: 13771.4 samples/s (总计), 3442.9 samples/s (每GPU)
+平均通信开销: 4.5%
+最终损失: 0.042369
+峰值GPU内存: 0.06GB
+c207-15:745754:745754 [1] NCCL INFO comm 0x5643417b3b10 rank 3 nranks 4 cudaDev 1 busId 98000 - Abort COMPLETE
+ [0] NCCL INFO 10 coll channels, 0 nvls channels, 16 p2p channels, 2 p2p channels per peer
+c207-15:745753:745922 [0] NCCL INFO comm 0x55cce2645df0 rank 2 nranks 4 cudaDev 0 nvmlDev 0 busId 17000 commId 0x3cc2d2966dce3b43 - Init COMPLETE
+c207-15:745753:745928 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+c207-15:745753:745753 [0] NCCL INFO comm 0x55cce2645df0 rank 2 nranks 4 cudaDev 0 busId 17000 - Abort COMPLETE
+c207-6:2459058:2459235 [1] NCCL INFO [Service thread] Connection closed by localRank 1
+c207-6:2459058:2459058 [1] NCCL INFO comm 0x56331a4c4080 rank 1 nranks 4 cudaDev 1 busId 98000 - Abort COMPLETE
+-6:2459057:2459228 [0] NCCL INFO Channel 05/0 : 0[0] -> 2[0] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Channel 06/0 : 0[0] -> 2[0] [send] via NET/IB/1
+c207-6:2459057:2459228 [0] NCCL INFO Channel 07/0 : 0[0] -> 2[0] [send] via NET/IB/0
+c207-6:2459057:2459228 [0] NCCL INFO Connected all trees
+c207-6:2459057:2459228 [0] NCCL INFO threadThresholds 8/8/64 | 32/8/64 | 512 | 512
+c207-6:2459057:2459228 [0] NCCL INFO 10 coll channels, 0 nvls channels, 16 p2p channels, 2 p2p channels per peer
+c207-6:2459057:2459228 [0] NCCL INFO comm 0x55d345412eb0 rank 0 nranks 4 cudaDev 0 nvmlDev 0 busId 17000 commId 0x3cc2d2966dce3b43 - Init COMPLETE
+c207-6:2459057:2459234 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+c207-6:2459057:2459057 [0] NCCL INFO comm 0x55d345412eb0 rank 0 nranks 4 cudaDev 0 busId 17000 - Abort COMPLETE
+=== 测试完成 ===
+结束时间: Sun Jul 20 21:25:28 CEST 2025
+查找结果文件...
+SUCCESS: 测试结果已保存到: ./results/weak_scaling_n2g4_ddp_performance.json
+RESULTS: 快速查看
+  总训练时间: 290.63秒
+  平均通信开销: 4.5%

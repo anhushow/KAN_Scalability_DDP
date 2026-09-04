@@ -1,0 +1,44 @@
+slurmstepd: info: Setting TMPDIR to /scratch/14994505. Previous errors about TMPDIR can be discarded
+跨节点DDP配置: Master=a100-50:14505
+=== 强扩展性测试（固定100K样本）: strong_scaling_n2g4 ===
+节点数: 2
+总GPU数: 4
+作业ID: 14994505
+GPU类型: 普通A100节点
+CPU核心: 128 (4×32)
+描述: 4GPU双节点
+开始时间: Sun Jul 20 20:08:38 CEST 2025
+节点列表: a100-[50-51]
+Master节点: a100-50
+Master端口: 14505
+检查节点连通性...
+c210-2
+c210-2
+c210-3
+c210-3
+Rank 0: 跨节点DDP配置
+Rank 0: Master节点: a100-50
+Rank 0: Master端口: 14505
+Rank 0: World size: 4, Local rank: 0
+Rank 0: 连接到 a100-50:14505
+=== KAN并行化最小可行性测试 ===
+测试类型: strong_scaling
+模式: DDP
+数据集大小: 100,000样本
+参数: K=3, Grid=10, Width=64
+设备: cuda:0, GPU数量: 4, 节点数量: 2
+批次大小: 512, 训练轮数: 40
+checkpoint directory created: ./model
+saving model version 0.0
+Rank 1: 跨节点DDP配置
+Rank 1: Master节点: a100-50
+Rank 1: Master端口: 14505
+Rank 1: World size: 4, Local rank: 1
+Rank 1: 连接到 a100-50:14505
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 4
+=== 测试完成 ===
+结束时间: Sun Jul 20 20:08:44 CEST 2025
+查找结果文件...
+WARNING: 未找到结果文件

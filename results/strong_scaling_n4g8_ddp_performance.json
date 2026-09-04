@@ -1,0 +1,744 @@
+{
+  "mode": "ddp",
+  "test_type": "strong_scaling",
+  "config": {
+    "k": 3,
+    "grid_size": 10,
+    "width": 64,
+    "batch_size": 512,
+    "epochs": 40,
+    "dataset_size": 100000
+  },
+  "gpu_count": 8,
+  "node_count": 4,
+  "metrics": [
+    {
+      "epoch": 0,
+      "loss": 9.201873302459717,
+      "epoch_time": 5.214958429336548,
+      "avg_batch_time": 0.1977705764770508,
+      "samples_per_second": 2396.9510341025407,
+      "communication_overhead_percent": 2.8065202059243077,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 2.8,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.621448516845703
+      }
+    },
+    {
+      "epoch": 1,
+      "loss": 7.588875331878662,
+      "epoch_time": 3.729315757751465,
+      "avg_batch_time": 0.14594112396240233,
+      "samples_per_second": 3351.8213023443977,
+      "communication_overhead_percent": 2.125110000078273,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.62387466430664
+      }
+    },
+    {
+      "epoch": 2,
+      "loss": 5.81352689743042,
+      "epoch_time": 3.729879140853882,
+      "avg_batch_time": 0.14633581161499024,
+      "samples_per_second": 3351.315023343725,
+      "communication_overhead_percent": 1.4323374116701535,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.624244689941406
+      }
+    },
+    {
+      "epoch": 3,
+      "loss": 4.343188199996948,
+      "epoch_time": 3.7289535999298096,
+      "avg_batch_time": 0.14619606018066406,
+      "samples_per_second": 3352.146832890409,
+      "communication_overhead_percent": 1.7097687855057953,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.62435531616211
+      }
+    },
+    {
+      "epoch": 4,
+      "loss": 3.294717130661011,
+      "epoch_time": 3.730912923812866,
+      "avg_batch_time": 0.1464625644683838,
+      "samples_per_second": 3350.3864215692884,
+      "communication_overhead_percent": 2.7217431034370065,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.2,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.623245239257812
+      }
+    },
+    {
+      "epoch": 5,
+      "loss": 2.7318846130371095,
+      "epoch_time": 3.72538161277771,
+      "avg_batch_time": 0.14603609085083008,
+      "samples_per_second": 3355.3609533923104,
+      "communication_overhead_percent": 4.161273331447459,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.62197494506836
+      }
+    },
+    {
+      "epoch": 6,
+      "loss": 2.33064603805542,
+      "epoch_time": 3.7271220684051514,
+      "avg_batch_time": 0.14608644485473632,
+      "samples_per_second": 3353.7940991958963,
+      "communication_overhead_percent": 4.0568537606479556,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.62350845336914
+      }
+    },
+    {
+      "epoch": 7,
+      "loss": 2.033714761734009,
+      "epoch_time": 3.7197492122650146,
+      "avg_batch_time": 0.14587045669555665,
+      "samples_per_second": 3360.441601488653,
+      "communication_overhead_percent": 3.5494689783202844,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.2,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.621936798095703
+      }
+    },
+    {
+      "epoch": 8,
+      "loss": 1.8188138580322266,
+      "epoch_time": 3.718876600265503,
+      "avg_batch_time": 0.14585407257080077,
+      "samples_per_second": 3361.2301088741647,
+      "communication_overhead_percent": 2.402309119699317,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.621360778808594
+      }
+    },
+    {
+      "epoch": 9,
+      "loss": 1.5593592500686646,
+      "epoch_time": 3.720184087753296,
+      "avg_batch_time": 0.14580952644348144,
+      "samples_per_second": 3360.0487785401597,
+      "communication_overhead_percent": 2.9474207592991046,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.62411880493164
+      }
+    },
+    {
+      "epoch": 10,
+      "loss": 1.2723540163040161,
+      "epoch_time": 3.7289328575134277,
+      "avg_batch_time": 0.14609732627868652,
+      "samples_per_second": 3352.165479411555,
+      "communication_overhead_percent": 2.871926282916656,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.5,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.623912811279297
+      }
+    },
+    {
+      "epoch": 11,
+      "loss": 1.0544682669639587,
+      "epoch_time": 3.7277519702911377,
+      "avg_batch_time": 0.14616934776306154,
+      "samples_per_second": 3353.227387342444,
+      "communication_overhead_percent": 1.8885488731937043,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.624908447265625
+      }
+    },
+    {
+      "epoch": 12,
+      "loss": 0.7979079270362854,
+      "epoch_time": 3.821110248565674,
+      "avg_batch_time": 0.14986732482910156,
+      "samples_per_second": 3271.3005348882857,
+      "communication_overhead_percent": 3.449009547880815,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.639972686767578
+      }
+    },
+    {
+      "epoch": 13,
+      "loss": 0.6227338075637817,
+      "epoch_time": 3.7213294506073,
+      "avg_batch_time": 0.14563874244689942,
+      "samples_per_second": 3359.0146118237585,
+      "communication_overhead_percent": 2.9417526124075555,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640121459960938
+      }
+    },
+    {
+      "epoch": 14,
+      "loss": 0.46349066257476806,
+      "epoch_time": 3.723662853240967,
+      "avg_batch_time": 0.14592188835144043,
+      "samples_per_second": 3356.909713004862,
+      "communication_overhead_percent": 3.1561874461680235,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640968322753906
+      }
+    },
+    {
+      "epoch": 15,
+      "loss": 0.3399171656370163,
+      "epoch_time": 3.7232511043548584,
+      "avg_batch_time": 0.1460540771484375,
+      "samples_per_second": 3357.2809487330887,
+      "communication_overhead_percent": 2.346010808931251,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640491485595703
+      }
+    },
+    {
+      "epoch": 16,
+      "loss": 0.25586655795574187,
+      "epoch_time": 3.7272515296936035,
+      "avg_batch_time": 0.14628658294677735,
+      "samples_per_second": 3353.6776094710076,
+      "communication_overhead_percent": 4.151098209263357,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640495300292969
+      }
+    },
+    {
+      "epoch": 17,
+      "loss": 0.19929101288318635,
+      "epoch_time": 3.736231565475464,
+      "avg_batch_time": 0.1465800952911377,
+      "samples_per_second": 3345.6170424515108,
+      "communication_overhead_percent": 4.517151032691103,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.639617919921875
+      }
+    },
+    {
+      "epoch": 18,
+      "loss": 0.1750402706861496,
+      "epoch_time": 3.7306387424468994,
+      "avg_batch_time": 0.14624796867370604,
+      "samples_per_second": 3350.632656487489,
+      "communication_overhead_percent": 3.4936531774105006,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640754699707031
+      }
+    },
+    {
+      "epoch": 19,
+      "loss": 0.15588068425655366,
+      "epoch_time": 3.727449417114258,
+      "avg_batch_time": 0.14626524925231935,
+      "samples_per_second": 3353.4995653079404,
+      "communication_overhead_percent": 3.1617605293611444,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.2,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640300750732422
+      }
+    },
+    {
+      "epoch": 20,
+      "loss": 0.13784743160009383,
+      "epoch_time": 3.7265608310699463,
+      "avg_batch_time": 0.14611364364624024,
+      "samples_per_second": 3354.2991961333637,
+      "communication_overhead_percent": 4.1691386396542125,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.4,
+        "memory_used_gb": 8.63796615600586
+      }
+    },
+    {
+      "epoch": 21,
+      "loss": 0.12801224291324614,
+      "epoch_time": 3.727757453918457,
+      "avg_batch_time": 0.14611138343811036,
+      "samples_per_second": 3353.2224546585085,
+      "communication_overhead_percent": 4.531357819503453,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.639205932617188
+      }
+    },
+    {
+      "epoch": 22,
+      "loss": 0.11894754320383072,
+      "epoch_time": 3.7301268577575684,
+      "avg_batch_time": 0.14619571685791016,
+      "samples_per_second": 3351.092463250592,
+      "communication_overhead_percent": 2.8369862626740594,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640129089355469
+      }
+    },
+    {
+      "epoch": 23,
+      "loss": 0.11713916838169097,
+      "epoch_time": 3.7285354137420654,
+      "avg_batch_time": 0.1462486457824707,
+      "samples_per_second": 3352.522803975366,
+      "communication_overhead_percent": 3.2811036734686825,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.2,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.63956069946289
+      }
+    },
+    {
+      "epoch": 24,
+      "loss": 0.11374301046133041,
+      "epoch_time": 3.731036424636841,
+      "avg_batch_time": 0.14614242553710938,
+      "samples_per_second": 3350.2755206193633,
+      "communication_overhead_percent": 2.19838804751682,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640369415283203
+      }
+    },
+    {
+      "epoch": 25,
+      "loss": 0.11051433265209198,
+      "epoch_time": 3.7256312370300293,
+      "avg_batch_time": 0.14600643157958984,
+      "samples_per_second": 3355.1361379406558,
+      "communication_overhead_percent": 2.876120734807515,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.64169692993164
+      }
+    },
+    {
+      "epoch": 26,
+      "loss": 0.10404969215393066,
+      "epoch_time": 3.7335591316223145,
+      "avg_batch_time": 0.14623269081115722,
+      "samples_per_second": 3348.011792321198,
+      "communication_overhead_percent": 3.015571438966141,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.5,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.64272689819336
+      }
+    },
+    {
+      "epoch": 27,
+      "loss": 0.10630707263946533,
+      "epoch_time": 3.725964307785034,
+      "avg_batch_time": 0.14617060661315917,
+      "samples_per_second": 3354.836216193077,
+      "communication_overhead_percent": 2.429505312950074,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.640445709228516
+      }
+    },
+    {
+      "epoch": 28,
+      "loss": 0.10089935570955276,
+      "epoch_time": 3.7296526432037354,
+      "avg_batch_time": 0.14611055374145507,
+      "samples_per_second": 3351.5185449716896,
+      "communication_overhead_percent": 4.136417228119337,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.641921997070312
+      }
+    },
+    {
+      "epoch": 29,
+      "loss": 0.10146978974342347,
+      "epoch_time": 3.7303388118743896,
+      "avg_batch_time": 0.1460055160522461,
+      "samples_per_second": 3350.902057531633,
+      "communication_overhead_percent": 4.385592848658828,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.642925262451172
+      }
+    },
+    {
+      "epoch": 30,
+      "loss": 0.10039822965860366,
+      "epoch_time": 3.73374342918396,
+      "avg_batch_time": 0.14628360748291017,
+      "samples_per_second": 3347.8465344716997,
+      "communication_overhead_percent": 3.9983189979174574,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.6,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.645198822021484
+      }
+    },
+    {
+      "epoch": 31,
+      "loss": 0.0915851691365242,
+      "epoch_time": 3.7278237342834473,
+      "avg_batch_time": 0.14612113952636718,
+      "samples_per_second": 3353.162834670003,
+      "communication_overhead_percent": 2.5010145603090503,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.643329620361328
+      }
+    },
+    {
+      "epoch": 32,
+      "loss": 0.0968514895439148,
+      "epoch_time": 3.732447624206543,
+      "avg_batch_time": 0.1461050605773926,
+      "samples_per_second": 3349.0088163413398,
+      "communication_overhead_percent": 2.0476134127987557,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.642601013183594
+      }
+    },
+    {
+      "epoch": 33,
+      "loss": 0.09651770025491714,
+      "epoch_time": 3.727077007293701,
+      "avg_batch_time": 0.14619441986083984,
+      "samples_per_second": 3353.8346472418284,
+      "communication_overhead_percent": 2.0529217941053615,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.2,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.645706176757812
+      }
+    },
+    {
+      "epoch": 34,
+      "loss": 0.08816115766763687,
+      "epoch_time": 3.722656488418579,
+      "avg_batch_time": 0.14597811698913574,
+      "samples_per_second": 3357.817203625501,
+      "communication_overhead_percent": 2.249001958327907,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.64254379272461
+      }
+    },
+    {
+      "epoch": 35,
+      "loss": 0.08824328362941741,
+      "epoch_time": 3.7314560413360596,
+      "avg_batch_time": 0.146412935256958,
+      "samples_per_second": 3349.8987691475886,
+      "communication_overhead_percent": 2.0746125246554232,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.645198822021484
+      }
+    },
+    {
+      "epoch": 36,
+      "loss": 0.08870979756116867,
+      "epoch_time": 3.733844757080078,
+      "avg_batch_time": 0.14625247001647948,
+      "samples_per_second": 3347.7556816730607,
+      "communication_overhead_percent": 1.6747817813510535,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.646648406982422
+      }
+    },
+    {
+      "epoch": 37,
+      "loss": 0.08933580994606018,
+      "epoch_time": 3.7239272594451904,
+      "avg_batch_time": 0.14592402458190917,
+      "samples_per_second": 3356.67136577268,
+      "communication_overhead_percent": 2.068173077017794,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.647289276123047
+      }
+    },
+    {
+      "epoch": 38,
+      "loss": 0.0828185647726059,
+      "epoch_time": 3.7310950756073,
+      "avg_batch_time": 0.1462255001068115,
+      "samples_per_second": 3350.222855944085,
+      "communication_overhead_percent": 2.9835258642560385,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.3,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.650627136230469
+      }
+    },
+    {
+      "epoch": 39,
+      "loss": 0.08582091599702835,
+      "epoch_time": 3.7286133766174316,
+      "avg_batch_time": 0.14612506866455077,
+      "samples_per_second": 3352.4527049087346,
+      "communication_overhead_percent": 2.70079285653573,
+      "gpu_memory_gb": {
+        "allocated": 0.0361790657043457,
+        "reserved": 0.07421875,
+        "max_allocated": 0.05955028533935547
+      },
+      "system_metrics": {
+        "cpu_percent": 4.4,
+        "memory_percent": 4.5,
+        "memory_used_gb": 8.651405334472656
+      }
+    }
+  ],
+  "total_training_time": 150.79862189292908,
+  "total_time": 151.0128297805786,
+  "avg_throughput": 26617.462061211096,
+  "per_gpu_throughput": 3327.182757651387,
+  "avg_communication_overhead": 2.9525210702461857,
+  "final_loss": 0.08582091599702835,
+  "peak_gpu_memory": 0.05955028533935547,
+  "total_params": 5414
+}

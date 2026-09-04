@@ -1,0 +1,160 @@
+miniconda3/22.11.1-1 unloaded
+cesga/system unloaded
+        Preparing the environment for use of the sistema software stack.
+        Please rebuild modules cache: module --ignore-cache avail
+     
+cesga/system loaded
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) cesga/system
+cesga/system unloaded
+        Preparing the environment for use of the sistema software stack.
+        Please rebuild modules cache: module --ignore-cache avail
+     
+cesga/system loaded
+miniconda3/22.11.1-1 loaded
+Traceback (most recent call last):
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 479, in <module>
+    main() 
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 312, in main
+    model = SimpleKAN(input_dim=2, hidden_width=args.width, k=args.k, grid_size=args.grid_size)
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_kan.py", line 21, in __init__
+    self.kan = KAN(
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/kan/MultKAN.py", line 275, in __init__
+    os.makedirs(ckpt_path)
+  File "/mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: './model'
+Traceback (most recent call last):
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 479, in <module>
+    main() 
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 312, in main
+    model = SimpleKAN(input_dim=2, hidden_width=args.width, k=args.k, grid_size=args.grid_size)
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_kan.py", line 21, in __init__
+    self.kan = KAN(
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/kan/MultKAN.py", line 275, in __init__
+    os.makedirs(ckpt_path)
+  File "/mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/os.py", line 225, in makedirs
+    mkdir(name, mode)
+FileExistsError: [Errno 17] File exists: './model'
+Traceback (most recent call last):
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 479, in <module>
+    main() 
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 318, in main
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank])
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 798, in __init__
+    _verify_param_shape_across_processes(self.process_group, parameters)
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/distributed/utils.py", line 263, in _verify_param_shape_across_processes
+Traceback (most recent call last):
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 479, in <module>
+    main() 
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11/simple_main.py", line 318, in main
+    model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[local_rank])
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 798, in __init__
+    return dist._verify_params_across_processes(process_group, tensors, logger)
+torch.distributed.DistBackendError: [1] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1711403380164/work/torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x151a346bfd87 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5522c2e (0x151a78fabc2e in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x360 (0x151a78fa6440 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x151a78fa6782 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x151a78fa75b1 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x151a78f5ca21 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x151a78f5ca21 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x151a78f5ca21 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x151a35884a59 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x22b (0x151a3588ba4b in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: c10d::ProcessGroupNCCL::allgather(std::vector<std::vector<at::Tensor, std::allocator<at::Tensor> >, std::allocator<std::vector<at::Tensor, std::allocator<at::Tensor> > > >&, std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllgatherOptions const&) + 0xb5c (0x151a358a1e4c in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: <unknown function> + 0x54c7dbd (0x151a78f50dbd in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x54d1cb8 (0x151a78f5acb8 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x4b16e6c (0x151a7859fe6c in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x1696528 (0x151a7511f528 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x54d94d3 (0x151a78f624d3 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x54e48bf (0x151a78f6d8bf in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: c10d::verify_params_across_processes(c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, std::vector<at::Tensor, std::allocator<at::Tensor> > const&, std::optional<std::weak_ptr<c10d::Logger> > const&) + 0x26f (0x151a78fd3f2f in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0xc55081 (0x151a80b7e081 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #19: <unknown function> + 0x413c2f (0x151a8033cc2f in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x174714 (0x55556a7bc714 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #21: _PyObject_MakeTpCall + 0x37f (0x55556a78c9ef in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #22: _PyEval_EvalFrameDefault + 0x4979 (0x55556a816d89 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #23: <unknown function> + 0x1828e2 (0x55556a7ca8e2 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #24: _PyFunction_Vectorcall + 0x1e7 (0x55556a7cb527 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #25: <unknown function> + 0xfaebb (0x55556a742ebb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #26: <unknown function> + 0x182b0d (0x55556a7cab0d in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #27: _PyFunction_Vectorcall + 0x1e7 (0x55556a7cb527 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #28: _PyObject_FastCallDictTstate + 0xee (0x55556a7bc84e in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #29: <unknown function> + 0x17e3d9 (0x55556a7c63d9 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #30: _PyObject_MakeTpCall + 0x34b (0x55556a78c9bb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x1443 (0x55556a813853 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x413 (0x55556a7cb753 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #33: <unknown function> + 0xfaebb (0x55556a742ebb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #34: <unknown function> + 0x1828e2 (0x55556a7ca8e2 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #35: PyEval_EvalCodeEx + 0x4c (0x55556a87cbac in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #36: PyEval_EvalCode + 0x1b (0x55556a7cb9eb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #37: <unknown function> + 0x234c5b (0x55556a87cc5b in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #38: <unknown function> + 0x268705 (0x55556a8b0705 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #39: <unknown function> + 0x10d60d (0x55556a75560d in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #40: PyRun_SimpleFileExFlags + 0x1bf (0x55556a8b549f in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #41: Py_RunMain + 0x47f (0x55556a8b5c7f in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #42: Py_BytesMain + 0x39 (0x55556a8b5d79 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #43: __libc_start_main + 0xf3 (0x151a959454a3 in /lib64/libc.so.6)
+frame #44: <unknown function> + 0x1f2bc3 (0x55556a83abc3 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+    _verify_param_shape_across_processes(self.process_group, parameters)
+  File "/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/distributed/utils.py", line 263, in _verify_param_shape_across_processes
+    return dist._verify_params_across_processes(process_group, tensors, logger)
+torch.distributed.DistBackendError: [3] is setting up NCCL communicator and retrieving ncclUniqueId from [0] via c10d key-value store by key '0', but store->get('0') got error: Connection reset by peer
+Exception raised from recvBytes at /opt/conda/conda-bld/pytorch_1711403380164/work/torch/csrc/distributed/c10d/Utils.hpp:670 (most recent call first):
+frame #0: c10::Error::Error(c10::SourceLocation, std::string) + 0x57 (0x14cbb9f67d87 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libc10.so)
+frame #1: <unknown function> + 0x5522c2e (0x14cbfe853c2e in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #2: c10d::TCPStore::doWait(c10::ArrayRef<std::string>, std::chrono::duration<long, std::ratio<1l, 1000l> >) + 0x360 (0x14cbfe84e440 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #3: c10d::TCPStore::doGet(std::string const&) + 0x32 (0x14cbfe84e782 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #4: c10d::TCPStore::get(std::string const&) + 0xa1 (0x14cbfe84f5b1 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #5: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14cbfe804a21 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #6: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14cbfe804a21 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #7: c10d::PrefixStore::get(std::string const&) + 0x31 (0x14cbfe804a21 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #8: c10d::ProcessGroupNCCL::broadcastUniqueNCCLID(ncclUniqueId*, bool, std::string const&, int) + 0xa9 (0x14cbbb12ca59 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #9: c10d::ProcessGroupNCCL::getNCCLComm(std::string const&, std::vector<c10::Device, std::allocator<c10::Device> > const&, c10d::OpType, int, bool) + 0x22b (0x14cbbb133a4b in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #10: c10d::ProcessGroupNCCL::allgather(std::vector<std::vector<at::Tensor, std::allocator<at::Tensor> >, std::allocator<std::vector<at::Tensor, std::allocator<at::Tensor> > > >&, std::vector<at::Tensor, std::allocator<at::Tensor> >&, c10d::AllgatherOptions const&) + 0xb5c (0x14cbbb149e4c in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cuda.so)
+frame #11: <unknown function> + 0x54c7dbd (0x14cbfe7f8dbd in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #12: <unknown function> + 0x54d1cb8 (0x14cbfe802cb8 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #13: <unknown function> + 0x4b16e6c (0x14cbfde47e6c in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #14: <unknown function> + 0x1696528 (0x14cbfa9c7528 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #15: <unknown function> + 0x54d94d3 (0x14cbfe80a4d3 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #16: <unknown function> + 0x54e48bf (0x14cbfe8158bf in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #17: c10d::verify_params_across_processes(c10::intrusive_ptr<c10d::ProcessGroup, c10::detail::intrusive_target_default_null_type<c10d::ProcessGroup> > const&, std::vector<at::Tensor, std::allocator<at::Tensor> > const&, std::optional<std::weak_ptr<c10d::Logger> > const&) + 0x26f (0x14cbfe87bf2f in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.so)
+frame #18: <unknown function> + 0xc55081 (0x14cc06426081 in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #19: <unknown function> + 0x413c2f (0x14cc05be4c2f in /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/lib/libtorch_python.so)
+frame #20: <unknown function> + 0x174714 (0x557e4f169714 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #21: _PyObject_MakeTpCall + 0x37f (0x557e4f1399ef in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #22: _PyEval_EvalFrameDefault + 0x4979 (0x557e4f1c3d89 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #23: <unknown function> + 0x1828e2 (0x557e4f1778e2 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #24: _PyFunction_Vectorcall + 0x1e7 (0x557e4f178527 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #25: <unknown function> + 0xfaebb (0x557e4f0efebb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #26: <unknown function> + 0x182b0d (0x557e4f177b0d in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #27: _PyFunction_Vectorcall + 0x1e7 (0x557e4f178527 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #28: _PyObject_FastCallDictTstate + 0xee (0x557e4f16984e in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #29: <unknown function> + 0x17e3d9 (0x557e4f1733d9 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #30: _PyObject_MakeTpCall + 0x34b (0x557e4f1399bb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #31: _PyEval_EvalFrameDefault + 0x1443 (0x557e4f1c0853 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #32: _PyFunction_Vectorcall + 0x413 (0x557e4f178753 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #33: <unknown function> + 0xfaebb (0x557e4f0efebb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #34: <unknown function> + 0x1828e2 (0x557e4f1778e2 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #35: PyEval_EvalCodeEx + 0x4c (0x557e4f229bac in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #36: PyEval_EvalCode + 0x1b (0x557e4f1789eb in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #37: <unknown function> + 0x234c5b (0x557e4f229c5b in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #38: <unknown function> + 0x268705 (0x557e4f25d705 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #39: <unknown function> + 0x10d60d (0x557e4f10260d in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #40: PyRun_SimpleFileExFlags + 0x1bf (0x557e4f26249f in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #41: Py_RunMain + 0x47f (0x557e4f262c7f in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #42: Py_BytesMain + 0x39 (0x557e4f262d79 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+frame #43: __libc_start_main + 0xf3 (0x14cc1b1ed4a3 in /lib64/libc.so.6)
+frame #44: <unknown function> + 0x1f2bc3 (0x557e4f1e7bc3 in /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin/python)
+. This may indicate a possible application crash on rank 0 or a network set up issue.
+srun: error: a100-27: task 2: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=14994697.1
+slurmstepd: error: *** STEP 14994697.1 ON a100-15 CANCELLED AT 2025-07-20T20:52:53 ***
+srun: error: a100-15: task 0: Exited with exit code 1
+srun: error: a100-27: task 3: Exited with exit code 1
+srun: error: a100-15: task 1: Exited with exit code 1

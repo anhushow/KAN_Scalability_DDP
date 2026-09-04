@@ -1,0 +1,67 @@
+slurmstepd: info: Setting TMPDIR to /scratch/14994437. Previous errors about TMPDIR can be discarded
+=== 调试开始 ===
+时间: Sun Jul 20 20:06:22 CEST 2025
+用户: curso349
+工作目录: /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/project/11
+节点: c207-6
+=== 环境变量检查 ===
+STORE: '/mnt/netapp2/Store_uni//home/ulc/cursos/curso349'
+HOME: '/home/ulc/cursos/curso349'
+PATH: /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env/bin:/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/bin:/opt/cesga/system/software/Core/miniconda3/22.11.1-1/condabin:/opt/cesga/system/software/Core/miniconda3/22.11.1-1/bin:/opt/cesga/system/software/Core/miniconda3/22.11.1-1:/opt/cesga/system/software/Core/miniconda3/22.11.1-1/sbin:/opt/cesga/system/software/Core/miniconda3/22.11.1-1/bin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/mnt/netapp2/Home_FT2/home/ulc/cursos/curso349/.cursor-server/cli/servers/Stable-a8e95743c5268be73767c46944a71f4465d05c90/server/bin/remote-cli:/home/ulc/cursos/curso349/hpctools/valgrindmake/bin:/home/ulc/cursos/curso349/bin
+=== 基础命令测试 ===
+Bash版本: 4.4.20(1)-release
+/bin/bash
+/bin/ls
+=== 目录创建测试 ===
+total 104
+drwxr-xr-x  6 curso349 ulc  4096 Jul 20  2025 .
+drwxr-xr-x 15 curso349 ulc  4096 Jul 20 20:04 ..
+-rwxr-xr-x  1 curso349 ulc 28368 Jul 20 20:04 auto_run_tests.sh
+-rw-r--r--  1 curso349 ulc     0 Jul 20  2025 debug_14994437.e
+-rw-r--r--  1 curso349 ulc  1213 Jul 20  2025 debug_14994437.o
+drwxr-xr-x  2 curso349 ulc  4096 Jul 20  2025 logs
+drwxr-xr-x  2 curso349 ulc  4096 Jul 20  2025 results
+-rw-r--r--  1 curso349 ulc  3459 Jul 20 20:04 simple_datasets.py
+-rw-r--r--  1 curso349 ulc  1828 Jul 20 20:04 simple_kan.py
+-rw-r--r--  1 curso349 ulc 19535 Jul 20 20:04 simple_main.py
+-rw-r--r--  1 curso349 ulc  1943 Jul 20 20:04 simple_test.sh
+-rw-r--r--  1 curso349 ulc 10173 Jul 20 20:04 summarize_results.py
+drwxr-xr-x  2 curso349 ulc  4096 Jul 20  2025 test_output
+drwxr-xr-x  2 curso349 ulc  4096 Jul 20 20:04 test_scripts
+目录创建: OK
+=== 模块系统测试 ===
+加载cesga/system...
+cesga/system: OK
+加载miniconda3...
+miniconda3: OK
+=== Conda测试 ===
+/opt/cesga/system/software/Core/miniconda3/22.11.1-1/bin/conda
+conda 23.1.0
+conda路径: /opt/cesga/system/software/Core/miniconda3/22.11.1-1/bin/conda
+=== 环境列表 ===
+# conda environments:
+#
+pykan-env             *  /mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env
+base                     /opt/cesga/system/software/Core/miniconda3/22.11.1-1
+SqueezeMeta              /opt/cesga/system/software/Core/miniconda3/22.11.1-1/envs/SqueezeMeta
+prueba                   /opt/cesga/system/software/Core/miniconda3/22.11.1-1/envs/prueba
+
+=== STORE路径检查 ===
+STORE已设置: /mnt/netapp2/Store_uni//home/ulc/cursos/curso349
+total 2929604
+drwx------   8 curso349 ulc        4096 Jun 16 13:55 .
+drwxr-x--x 302 root     root      24576 Feb  3 09:32 ..
+drwxr-xr-x   6 curso349 ulc        4096 Jun  5  2024 Cesga2023Courses
+-rw-r--r--   1 curso349 ulc  2988083562 Jun  4  2024 cpmytorchdist.tar.gz
+drwxr-xr-x  15 curso349 ulc        4096 May 21 12:48 fromhome
+drwxr-xr-x   6 curso349 ulc        4096 Jun 22  2024 HPCTOOLSAI
+drwxr-xr-x   9 curso349 ulc        4096 Jun 19 11:48 kan
+drwxr-xr-x  21 curso349 ulc        4096 Jun  5  2024 mytorchdist
+drwxr-xr-x   3 curso349 ulc        4096 May 28 10:12 pykan_project
+=== Conda环境路径检查 ===
+conda环境路径存在: /mnt/netapp2/Store_uni//home/ulc/cursos/curso349/kan/envs/pykan-env
+=== 基础Python测试 ===
+/opt/cesga/system/software/Core/miniconda3/22.11.1-1/bin/python
+Python 3.9.16
+=== 调试完成 ===
+如果看到这条消息，说明脚本执行成功

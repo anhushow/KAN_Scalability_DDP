@@ -1,0 +1,50 @@
+slurmstepd: info: Setting TMPDIR to /scratch/14994480. Previous errors about TMPDIR can be discarded
+单节点DDP配置: Master=localhost:12355
+=== 强扩展性测试（固定100K样本）: strong_scaling_n1g1 ===
+节点数: 1
+总GPU数: 1
+作业ID: 14994480
+GPU类型: 普通A100节点
+CPU核心: 32 (1×32)
+描述: 1GPU基准
+开始时间: Sun Jul 20 20:07:29 CEST 2025
+Rank 0: 跨节点DDP配置
+Rank 0: Master节点: localhost
+Rank 0: Master端口: 12355
+Rank 0: World size: 1, Local rank: 0
+Rank 0: 连接到 localhost:12355
+=== KAN并行化最小可行性测试 ===
+测试类型: strong_scaling
+模式: SINGLE
+数据集大小: 100,000样本
+参数: K=3, Grid=10, Width=64
+设备: cuda:0, GPU数量: 1, 节点数量: 1
+批次大小: 512, 训练轮数: 40
+checkpoint directory created: ./model
+saving model version 0.0
+总参数数: 5,414
+GPU预热中...
+Epoch  0/40: Loss=4.123393, Time=23.42s, Throughput=4269.7 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch  5/40: Loss=0.076386, Time=22.32s, Throughput=4480.7 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 10/40: Loss=0.045742, Time=22.36s, Throughput=4473.1 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 15/40: Loss=0.015868, Time=22.50s, Throughput=4443.6 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 20/40: Loss=0.003743, Time=22.75s, Throughput=4396.5 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 25/40: Loss=0.001588, Time=22.51s, Throughput=4441.6 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 30/40: Loss=0.000789, Time=22.40s, Throughput=4463.9 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 35/40: Loss=0.000496, Time=22.53s, Throughput=4439.0 samples/s, CommOverhead=0.0%, GPU=0.04GB
+Epoch 39/40: Loss=0.000384, Time=22.42s, Throughput=4461.0 samples/s, CommOverhead=0.0%, GPU=0.04GB
+
+=== 训练完成 ===
+测试类型: strong_scaling
+总训练时间: 900.59秒
+平均吞吐量: 4442.1 samples/s (总计), 4442.1 samples/s (每GPU)
+平均通信开销: 0.0%
+最终损失: 0.000384
+峰值GPU内存: 0.06GB
+=== 测试完成 ===
+结束时间: Sun Jul 20 20:22:43 CEST 2025
+查找结果文件...
+SUCCESS: 测试结果已保存到: ./results/strong_scaling_n1g1_single_performance.json
+RESULTS: 快速查看
+  总训练时间: 900.59秒
+  平均通信开销: 0.0%

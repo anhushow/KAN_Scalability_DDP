@@ -1,0 +1,24 @@
+miniconda3/22.11.1-1 unloaded
+cesga/system unloaded
+        Preparing the environment for use of the sistema software stack.
+        Please rebuild modules cache: module --ignore-cache avail
+     
+cesga/system loaded
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) cesga/system
+cesga/system unloaded
+        Preparing the environment for use of the sistema software stack.
+        Please rebuild modules cache: module --ignore-cache avail
+     
+cesga/system loaded
+miniconda3/22.11.1-1 loaded
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [64, 1, 13], strides() = [13, 1, 1]
+bucket_view.sizes() = [64, 1, 13], strides() = [13, 13, 1] (Triggered internally at /opt/conda/conda-bld/pytorch_1711403380164/work/torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/mnt/netapp2/Store_uni/home/ulc/cursos/curso349/kan/envs/pykan-env/lib/python3.9/site-packages/torch/autograd/__init__.py:266: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [64, 1, 13], strides() = [13, 1, 1]
+bucket_view.sizes() = [64, 1, 13], strides() = [13, 13, 1] (Triggered internally at /opt/conda/conda-bld/pytorch_1711403380164/work/torch/csrc/distributed/c10d/reducer.cpp:322.)
+  Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass

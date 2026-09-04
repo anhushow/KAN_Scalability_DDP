@@ -1,0 +1,112 @@
+slurmstepd: info: Setting TMPDIR to /scratch/14994552. Previous errors about TMPDIR can be discarded
+跨节点DDP配置: Master=a100-44:14552
+=== 弱扩展性测试（每GPU 25K样本）: weak_scaling_n2g2 ===
+节点数: 2
+总GPU数: 2
+作业ID: 14994552
+GPU类型: 普通A100节点
+CPU核心: 64 (2×32)
+描述: 2GPU(50K)双节点
+开始时间: Sun Jul 20 20:10:51 CEST 2025
+节点列表: a100-[44,48]
+Master节点: a100-44
+Master端口: 14552
+检查节点连通性...
+c209-12
+c209-16
+c209-12:664512:664512 [0] NCCL INFO Bootstrap : Using ib0:172.30.209.12<0>
+c209-12:664512:664512 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+c209-12:664512:664512 [0] NCCL INFO cudaDriverVersion 12080
+NCCL version 2.19.3+cuda12.1
+Rank 0: 跨节点DDP配置
+Rank 0: Master节点: a100-44
+Rank 0: Master端口: 14552
+Rank 0: World size: 2, Local rank: 0
+Rank 0: 连接到 a100-44:14552
+=== KAN并行化最小可行性测试 ===
+测试类型: weak_scaling
+模式: DDP
+数据集大小: 50,000样本
+参数: K=3, Grid=10, Width=64
+设备: cuda:0, GPU数量: 2, 节点数量: 2
+批次大小: 512, 训练轮数: 40
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 2
+总参数数: 5,414
+GPU预热中...
+Rank 1: 跨节点DDP配置
+Rank 1: Master节点: a100-44
+Rank 1: Master端口: 14552
+Rank 1: World size: 2, Local rank: 0
+Rank 1: 连接到 a100-44:14552
+checkpoint directory created: ./model
+saving model version 0.0
+使用DistributedDataParallel，进程数: 2
+Epoch  0/40: Loss=8.174588, Time=8.58s, Throughput=2912.6 samples/s, CommOverhead=1.9%, GPU=0.04GB
+Epoch  5/40: Loss=0.805778, Time=7.22s, Throughput=3461.6 samples/s, CommOverhead=1.2%, GPU=0.04GB
+Epoch 10/40: Loss=0.116161, Time=7.19s, Throughput=3477.6 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch 15/40: Loss=0.091862, Time=7.22s, Throughput=3463.8 samples/s, CommOverhead=1.6%, GPU=0.04GB
+Epoch 20/40: Loss=0.077925, Time=7.19s, Throughput=3478.1 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch 25/40: Loss=0.066462, Time=7.51s, Throughput=3330.5 samples/s, CommOverhead=1.5%, GPU=0.04GB
+Epoch 30/40: Loss=0.057143, Time=7.19s, Throughput=3478.1 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch 35/40: Loss=0.049311, Time=7.21s, Throughput=3468.6 samples/s, CommOverhead=1.4%, GPU=0.04GB
+Epoch 39/40: Loss=0.043197, Time=7.24s, Throughput=3453.7 samples/s, CommOverhead=1.3%, GPU=0.04GB
+
+=== 训练完成 ===
+测试类型: weak_scaling
+总训练时间: 290.39秒
+平均吞吐量: 6895.2 samples/s (总计), 3447.6 samples/s (每GPU)
+平均通信开销: 1.4%
+最终损失: 0.043197
+峰值GPU内存: 0.06GB
+c209-16:1462346:1462346 [0] NCCL INFO cudaDriverVersion 12080
+c209-16:1462346:1462346 [0] NCCL INFO Bootstrap : Using ib0:172.30.209.16<0>
+c209-16:1462346:1462346 [0] NCCL INFO NET/Plugin : dlerror=libnccl-net.so: cannot open shared object file: No such file or directory No plugin found (libnccl-net.so), using internal implementation
+c209-16:1462346:1462438 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+c209-16:1462346:1462438 [0] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.209.16<0>
+c209-16:1462346:1462438 [0] NCCL INFO Using non-device net plugin version 0
+c209-16:1462346:1462438 [0] NCCL INFO Using network IB
+c209-16:1462346:1462438 [0] NCCL INFO comm 0x564f751fbef0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 98000 commId 0x36b3f2e2f2d6826f - Init START
+c209-16:1462346:1462438 [0] NCCL INFO Setting affinity for GPU 0 to ffff,00000000
+c209-16:1462346:1462438 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+c209-16:1462346:1462438 [0] NCCL INFO P2P Chunksize set to 131072
+c209-16:1462346:1462438 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [receive] via NET/IB/0
+c209-16:1462346:1462438 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [receive] via NET/IB/0
+c209-16:1462346:1462438 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [send] via NET/IB/0
+c209-16:1462346:1462438 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [send] via NET/IB/0
+c209-16:1462346:1462438 [0] NCCL INFO Connected all rings
+c209-16:1462346:1462438 [0] NCCL INFO Connected all trees
+c209-16:1462346:1462438 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+c209-16:1462346:1462438 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+c209-16:1462346:1462438 [0] NCCL INFO comm 0x564f751fbef0 rank 1 nranks 2 cudaDev 0 nvmlDev 0 busId 98000 commId 0x36b3f2e2f2d6826f - Init COMPLETE
+c209-16:1462346:1462441 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+c209-16:1462346:1462346 [0] NCCL INFO comm 0x564f751fbef0 rank 1 nranks 2 cudaDev 0 busId 98000 - Abort COMPLETE
+c209-12:664512:664603 [0] NCCL INFO NCCL_IB_DISABLE set by environment to 0.
+c209-12:664512:664603 [0] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.209.12<0>
+c209-12:664512:664603 [0] NCCL INFO Using non-device net plugin version 0
+c209-12:664512:664603 [0] NCCL INFO Using network IB
+c209-12:664512:664603 [0] NCCL INFO comm 0x5646451eac60 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 98000 commId 0x36b3f2e2f2d6826f - Init START
+c209-12:664512:664603 [0] NCCL INFO Setting affinity for GPU 0 to ffff,00000000
+c209-12:664512:664603 [0] NCCL INFO Channel 00/02 :    0   1
+c209-12:664512:664603 [0] NCCL INFO Channel 01/02 :    0   1
+c209-12:664512:664603 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+c209-12:664512:664603 [0] NCCL INFO P2P Chunksize set to 131072
+c209-12:664512:664603 [0] NCCL INFO Channel 00/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+c209-12:664512:664603 [0] NCCL INFO Channel 01/0 : 1[0] -> 0[0] [receive] via NET/IB/0
+c209-12:664512:664603 [0] NCCL INFO Channel 00/0 : 0[0] -> 1[0] [send] via NET/IB/0
+c209-12:664512:664603 [0] NCCL INFO Channel 01/0 : 0[0] -> 1[0] [send] via NET/IB/0
+c209-12:664512:664603 [0] NCCL INFO Connected all rings
+c209-12:664512:664603 [0] NCCL INFO Connected all trees
+c209-12:664512:664603 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+c209-12:664512:664603 [0] NCCL INFO 2 coll channels, 0 nvls channels, 2 p2p channels, 2 p2p channels per peer
+c209-12:664512:664603 [0] NCCL INFO comm 0x5646451eac60 rank 0 nranks 2 cudaDev 0 nvmlDev 0 busId 98000 commId 0x36b3f2e2f2d6826f - Init COMPLETE
+c209-12:664512:664606 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+c209-12:664512:664512 [0] NCCL INFO comm 0x5646451eac60 rank 0 nranks 2 cudaDev 0 busId 98000 - Abort COMPLETE
+=== 测试完成 ===
+结束时间: Sun Jul 20 20:15:55 CEST 2025
+查找结果文件...
+SUCCESS: 测试结果已保存到: ./results/weak_scaling_n2g2_ddp_performance.json
+RESULTS: 快速查看
+  总训练时间: 290.39秒
+  平均通信开销: 1.4%

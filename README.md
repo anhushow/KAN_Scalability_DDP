@@ -13,7 +13,8 @@
 
 > **Official Source Code Notice**:  
 > This repository contains the official source code, automated benchmarking suite, and reproducible experimental artifacts for the research paper:  
-> **"Scalability Analysis of Distributed Kolmogorov-Arnold Network Training on High-Performance Computing Systems"**.
+> **"Scalability Analysis of Distributed Kolmogorov-Arnold Network Training on High-Performance Computing Systems"
+(https://doi.org/10.48550/arXiv.2609.07740)**.
 
 ---
 
